@@ -16,6 +16,10 @@ class Queue {
             return value;
         }
 
+        int size() {
+            return queue.size();
+        }
+
     private:
         vector<T> queue;
 };
@@ -27,7 +31,7 @@ int main() {
         queue.push(i);
     }
 
-    for (int i = 0; i < 10; i++) {
+    while (queue.size() > 0) {
         cout << queue.pop() << endl;
     }
 }

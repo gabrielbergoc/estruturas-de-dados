@@ -7,6 +7,9 @@ class Queue:
     
     def pop(self):
         return self.__queue.pop(0)
+    
+    def size(self):
+        return len(self.__queue)
 
 
 if __name__ == '__main__':
@@ -16,5 +19,5 @@ if __name__ == '__main__':
     for element in elements:
         queue.push(element)
     
-    for i in range(10):
+    while queue.size() > 0:
         print(queue.pop())
