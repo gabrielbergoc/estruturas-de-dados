@@ -11,6 +11,9 @@ class Queue:
     def size(self):
         return len(self.__queue)
 
+    def is_empty(self):
+        return self.size() == 0;
+
 
 if __name__ == '__main__':
     elements = [i for i in range(10)]
@@ -19,5 +22,5 @@ if __name__ == '__main__':
     for element in elements:
         queue.push(element)
     
-    while queue.size() > 0:
+    while not queue.is_empty():
         print(queue.pop())

@@ -20,6 +20,14 @@ class Queue {
             return queue.size();
         }
 
+        bool is_empty() {
+            return size() == 0;
+        }
+
+        T front() {
+            return queue.front();
+        }
+
     private:
         vector<T> queue;
 };
@@ -31,7 +39,7 @@ int main() {
         queue.push(i);
     }
 
-    while (queue.size() > 0) {
+    while (!queue.is_empty()) {
         cout << queue.pop() << endl;
     }
 }
