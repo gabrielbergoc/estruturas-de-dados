@@ -14,6 +14,9 @@ class Queue:
     def is_empty(self):
         return self.size() == 0;
 
+    def front(self):
+        return self.__queue[0]
+
 
 if __name__ == '__main__':
     elements = [i for i in range(10)]
@@ -23,4 +26,6 @@ if __name__ == '__main__':
         queue.push(element)
     
     while not queue.is_empty():
-        print(queue.pop())
+        if queue.front() % 2 == 0:
+            print(queue.front())
+        queue.pop()

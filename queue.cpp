@@ -40,6 +40,9 @@ int main() {
     }
 
     while (!queue.is_empty()) {
-        cout << queue.pop() << endl;
+        if (queue.front() % 2 == 0) {
+            cout << queue.front() << endl;
+        }
+        queue.pop();
     }
 }
