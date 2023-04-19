@@ -17,6 +17,9 @@ class Queue:
     def front(self):
         return self.__queue[0]
 
+    def back(self):
+        return self.__queue[-1]
+
 
 if __name__ == '__main__':
     elements = [i for i in range(10)]
@@ -24,6 +27,8 @@ if __name__ == '__main__':
     
     for element in elements:
         queue.push(element)
+    
+    print(queue.back())
     
     while not queue.is_empty():
         if queue.front() % 2 == 0:

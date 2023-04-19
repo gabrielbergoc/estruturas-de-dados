@@ -28,6 +28,10 @@ class Queue {
             return queue.front();
         }
 
+        T back() {
+            return queue.back();
+        }
+
     private:
         vector<T> queue;
 };
@@ -38,6 +42,8 @@ int main() {
     for (int i = 0; i < 10; i++) {
         queue.push(i);
     }
+
+    cout << queue.back() << endl;
 
     while (!queue.is_empty()) {
         if (queue.front() % 2 == 0) {
